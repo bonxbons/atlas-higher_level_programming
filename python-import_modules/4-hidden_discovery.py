@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-import hidden_4
+from variable_load_5 import a
 if __name__ == "__main__":
-    for item in dir(hidden_4):
-        if item[0] != '_':
-            print("{}".format(item))
+    print("{}".format(a))
