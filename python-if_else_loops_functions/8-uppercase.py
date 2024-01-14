@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-
-def uppercase(s):
-    result = ""
-    for c in s:
-        diff = ord('A') - ord('a') if 'a' <= c <= 'z' else 0
-        result += chr(ord(c) + diff)
-    print(result)
+def uppercase(str):
+    for letter in str:
+        print("{}".format(chr(ord(letter) - 32) if 96 <= ord(
+            letter) <= 123 else letter), end='')
+    print()
