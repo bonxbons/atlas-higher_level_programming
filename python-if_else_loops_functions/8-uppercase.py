@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+
 def uppercase(s):
+    result = ""
     for c in s:
-        print(chr(ord(c) - 32) if 'a' <= c <= 'z' else c, end="")
-    print()
+        diff = ord('A') - ord('a') if 'a' <= c <= 'z' else 0
+        result += chr(ord(c) + diff)
+    print(result)
