@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""
-Append module
-"""
+"""Defines a JSON-to-object function."""
 
 
-def append_write(filename="", text=""):
-    """Append to file with text
-    args:
-        filename: add to this object
-        text: string to append
-    return:
-        number of characters added
-    """
+import json
 
-    with open(filename, mode="a", encoding="utf-8") as f:
-        if f.write(text):
-            return len(text)
+
+def from_json_string(my_str):
+    """Return the Python object representation of a JSON string."""
+    return json.loads(my_str)
