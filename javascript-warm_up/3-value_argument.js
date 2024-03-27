@@ -1,9 +1,9 @@
 #!/usr/bin/node
-// If no arguments are passed to the script, print “No argument”
-if (process.argv.length === 2) {
+// Check if any arguments are passed to the script
+if (process.argv[2] === undefined) {
+  // If no arguments are passed, print "No argument"
   console.log("No argument");
-}
-// Otherwise, print the first argument passed to the script
-else {
+} else {
+  // If arguments are passed, print the first argument
   console.log(process.argv[2]);
 }
